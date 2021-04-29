@@ -1,4 +1,4 @@
-## Diffusion Tensor Imaging
+## 02. Diffusion Tensor Imaging
 
 Here are some steps to set-up your machine for DTI analyses:
 1. Mrtrix3
