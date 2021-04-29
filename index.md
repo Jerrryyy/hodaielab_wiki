@@ -1,39 +1,14 @@
-## Welcome to GitHub Pages
+## Hodaie Lab Training Manual
 
-You can use the [editor on GitHub](https://github.com/hungs/hodaie/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Welcome to Hodaie Lab, to get you started here are some basics of what we do in the lab.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+If you got any questions, feel free to reach out to any of us! :smile:
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Diffusion Tensor Imaging
+Diffusion tensor imaging or DTI is used to visual the white matter and associated microstructural properties for body tissues. In our lab, we use DTI to visualize peripheral nerves and major white matter pathways within the brain. For more details on how to set up a Linux environment to perform DTI analyses, click [here](DTI)
 
-```markdown
-Syntax highlighted code block
+### Anatomical MRI
+Anatomical MRI is used to visualize gross anatomical structure non-invasively in humans. In our lab, we use anatomical MRI (T1-weighted and T2-weighted) with or without contrast to identify particular regions within the PNS and CNS of humans. This allows us to then examine differences/abnormalities that may exist between diseased and healthy control individuals. For more technical details and how to set up our anatomical MRI pipelines, click [here](anatMRI)
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/hungs/hodaie/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
-
-[To page 1](page1)
+Last updated: 04/29/2021
