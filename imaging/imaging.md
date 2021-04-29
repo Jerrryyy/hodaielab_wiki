@@ -1,7 +1,8 @@
 ---
 layout: default
-title: UI Components
+title: Imaging
 nav_order: 2
 has_children: true
-permalink: /func/func.md
 ---
+
+### Imaging techniques
