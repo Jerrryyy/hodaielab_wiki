@@ -1,4 +1,4 @@
-## Diffusion Tensor Imaging
+## MEG
 
 Here are some steps to set-up your machine for DTI analyses:
 1. Mrtrix3
