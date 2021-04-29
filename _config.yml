@@ -1,5 +1,3 @@
-theme: jekyll-theme-modernist
-title: H-LAB
+remote_theme: pmarsceill/just-the-docs
+title: H-LAB2
 description: hodaie lab start guide
-github:
-is project page:false
