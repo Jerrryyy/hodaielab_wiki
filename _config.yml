@@ -1,3 +1,4 @@
 theme: jekyll-theme-modernist
-github:
-  is_project_page: false
+title: H-LAB
+description: hodaie lab start guide
+is_project_page: false
