@@ -1,3 +1,6 @@
 remote_theme: pmarsceill/just-the-docs
 title: Hodaie Lab Training Manual
 description: H Lab FAQ
+aux_links:
+  "Lab Website":
+    - "//hodaielab.com"
