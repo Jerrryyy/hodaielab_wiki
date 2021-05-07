@@ -1,7 +1,9 @@
 remote_theme: pmarsceill/just-the-docs
 title: Hodaie Lab Training Manual
 description: H Lab FAQ
+baseurl: "/hodaie"
+url: "https://hungs.github.io"
+exclude: ['MEG.md']
 aux_links:
   "Lab Website":
     - "//hodaielab.com"
-exclude: ['MEG.md']
