@@ -12,7 +12,7 @@ The [University of Toronto Coders](https://uoftcoders.github.io/studyGroup/lesso
 ### Shell-command cheat sheet
 Here you can find the most frequently used BASH commands.
 | Shell command | action |
-|: ------------ |: ------------- |
+|:------------|:-------------|
 | pwd | present working directory |
 | ls [dir] | list the directory contents |
 | mkdir _dir_ | create a directory |
