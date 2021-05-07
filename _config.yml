@@ -4,3 +4,4 @@ description: H Lab FAQ
 aux_links:
   "Lab Website":
     - "//hodaielab.com"
+exclude: ['MEG.md']
