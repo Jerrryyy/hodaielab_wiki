@@ -12,4 +12,4 @@ If you want to run distros of Linux on Windows 10, you must first enable the Win
 1.  Enabling Windows Subsystem for Linux using Settings
 To install WSL using Setting on Windows 10, use these steps:
 Open Settings, Click on Apps and Under the "Related settings" section, click the Programs and Features option.
-![W10 settings](./Screenshots/Screenshot2_LI.jpg)
+![W10 settings](.././Screenshots/Screenshot2_LI.jpg)
