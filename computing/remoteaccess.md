@@ -3,7 +3,7 @@ title: Remote access
 parent: Computing
 ---
 
-## Setup remote access to UHN
+# Setup remote access to UHN
 Connecting to UHN intranet in browser
 1. Visit [https://intranet.remote.uhn.ca](https://intranet.remote.uhn.ca/)
 2. Login with T-ID or uhnresearch username (i.e. uhnresearch\username)
