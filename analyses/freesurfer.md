@@ -41,6 +41,7 @@ If you see similar output, your set up is almost completed!
 Before processing, be sure to copy your license.txt file to the $FREESURFER_HOME directory. 
 
 In addition, you can add the source command to your ~/.bashrc file, so freesurfer will be loaded automatically everytime you open the Terminal. To do that, type 
+
 |  |  |
 |:-------------|:---------------:|
 | ![Foma Kinaev](.././Screenshots/bash100.png)| __sudo_ _nano_ _~/.bashrc_|
@@ -65,6 +66,7 @@ For the longitudinal complete MR segmentation we are using contrast-free T1 Weig
 Main reconstruction command - _recon-all_ takes T1 MR data (in nifti format) and performs all steps, or part of FreeSurfer grey matter reconstruction and segmentation procress.
 
 An example of base terminal command: 
+
 |  |  |
 |:-------------|:---------------:|
 | ![Foma Kinaev](.././Screenshots/bash100.png)| _recon-all_ _-all_ _-subject_ _subjectname_ _-i_ _/path/to/input_volume_ |
@@ -86,6 +88,7 @@ Here is the summary of the most frequent errors you may have and how to solve it
   _recon-all_ does command does not work - 'bad interpreter' error.
   ### Answer 
   This may happen because FreeSurfer uses differend version of shell (tcsh). You need to type
+  
   |  |  |
   |:-------------|:---------------:|
   | ![Foma Kinaev](.././Screenshots/bash100.png)| _sudo_ _apt-get_ _install_ _tcsh_ |
