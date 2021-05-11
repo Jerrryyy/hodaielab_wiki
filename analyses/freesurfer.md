@@ -19,41 +19,42 @@ FreeSurfer is free software, however the [license (click here)](https://surfer.n
 
 
 The following tutorial is for Windows 10 computers with Linux subsystem installed. 
-<details>
-  <summary>Click to read the setup instructions</summary>
-  
-  Once you launch Ubuntu app, make the applications directory for your Unix imaging apps. ![Apps folder](.././Screenshots/apps_folder.png)
+
+<details open markdown="block">
+  <summary>
+    Click to read the setup instructions
+  </summary>
+  Once you launch Ubuntu app, make the applications directory for your Unix imaging apps.
+
+  ![Apps](.././Screenshots/apps_folder.png)
+
+  Once you  downloaded the archive, move it to the apps directory by typing following command:
+  ![Move archive](.././Screenshots/mv_archive.png)
+
+  Now you will be able to see the archieve in your apps directory.
+  ![Show archive](.././Screenshots/show_archive.png)
+
+  Unzip the archieve using following command:
+  ![Unzip archive](.././Screenshots/tar_archive.png)
+
+  After extraction is over, check the set up by typing these commands:
+  ![Launch FS](.././Screenshots/export_fs.png)
+
+  If you see similar output, your set up is almost completed!
+  Before processing, be sure to copy your license.txt file to the $FREESURFER_HOME directory. 
+
+  In addition, you can add the source command to your ~/.bashrc file, so freesurfer will be loaded automatically everytime you open the Terminal. To do that, type 
+
+  ```scss
+  sudo nano ~/.bashrc
+  ```
 
 
-Once you  downloaded the archive, move it to the apps directory by typing following command:
-![Move archive](.././Screenshots/mv_archive.png)
 
-Now you will be able to see the archieve in your apps directory.
-![Show archive](.././Screenshots/show_archive.png)
+  ,press enter, then type your password. You will see the _.bashrc_ source code in the editing mode. Scroll the file down and add following:
+  ![.bashrc editing](.././Screenshots/nano_bashrc.png)
 
-Unzip the archieve using following command:
-![Unzip archive](.././Screenshots/tar_archive.png)
-
-After extraction is over, check the set up by typing these commands:
-![Launch FS](.././Screenshots/export_fs.png)
-
-If you see similar output, your set up is almost completed!
-Before processing, be sure to copy your license.txt file to the $FREESURFER_HOME directory. 
-
-In addition, you can add the source command to your ~/.bashrc file, so freesurfer will be loaded automatically everytime you open the Terminal. To do that, type 
-
-|  |  |
-|:-------------|:---------------:|
-| ![Foma Kinaev](.././Screenshots/bash100.png)| __sudo_ _nano_ _~/.bashrc_|
-
-
-
-,press enter, then type your password. You will see the _.bashrc_ source code in the editing mode. Scroll the file down and add following:
-![.bashrc editing](.././Screenshots/nano_bashrc.png)
-
-Save changes and restart Ubuntu app.
-
-  
+  Save changes and restart Ubuntu app.
 </details>
 
 
@@ -67,10 +68,9 @@ Main reconstruction command - _recon-all_ takes T1 MR data (in nifti format) and
 
 An example of base terminal command: 
 
-|  |  |
-|:-------------|:---------------:|
-| ![Foma Kinaev](.././Screenshots/bash100.png)| _recon-all_ _-all_ _-subject_ _subjectname_ _-i_ _/path/to/input_volume_ |
-
+```scss
+ recon-all -all -subject subjectname -i /path/to/input_volume 
+ ```
 where _-all_ flag, performing all steps of reconstruction; _-subject_ name of subject directory created in $SUBJECTS_DIR folder; _-i_ path to input MRI volume.
 
 The entire reconstruction process typically takes 8-24 hours per one subject.
@@ -81,38 +81,34 @@ The entire reconstruction process typically takes 8-24 hours per one subject.
 
 # F.A.Q
 Here is the summary of the most frequent errors you may have and how to solve it.
-<details>
-  <summary>Open F.A.Q.</summary>
+<details open markdown="block">
+  <summary>
+    Open F.A.Q.
+  </summary>
   
   ### Question 
+  
   _recon-all_ does command does not work - 'bad interpreter' error.
+  
   ### Answer 
   This may happen because FreeSurfer uses differend version of shell (tcsh). You need to type
-  
-  |  |  |
-  |:-------------|:---------------:|
-  | ![Foma Kinaev](.././Screenshots/bash100.png)| _sudo_ _apt-get_ _install_ _tcsh_ |
-
+  ```scss
+  sudo apt-get install tcsh 
+  ```
 
 
 
   If you see "Unable to locate package" error, type 
 
-  |  |  |
-  |:-------------|:---------------:|
-  | ![Foma Kinaev](.././Screenshots/bash100.png)| _sudo_ _apt-get_ _update_ |
-
+  ```scss
+  sudo apt-get update 
+  ```
    
 
-   and then try to install the package again.
+  and then try to install the package again.
  ### Question 
   _recon-all_ stuck at _mris_topology_fix_/defect correction.
   ### Answer 
   Sorry (expand here😁)
-
-
-  
-
-  
 </details>
 
