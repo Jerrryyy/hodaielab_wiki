@@ -13,7 +13,12 @@ FreeSurfer requires Unix-based environment, therefore it can work on Linux or Ma
 To install FreeSurfer on your computer, please download [this archieve](https://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/7.1.1/freesurfer-linux-centos6_x86_64-7.1.1.tar.gz), or check the official [FreeSurfer website](https://freesurfer.net). 
 
 ### License
-FreeSurfer is free software, however the [license (click here)](https://surfer.nmr.mgh.harvard.edu/registration.html) should be obtained in order to make the framework fully operational.
+FreeSurfer is free software, however the license  should be obtained in order to make the framework fully operational.
+
+<button type="button" name="button" class="btn">
+
+[Click here to get a license](https://surfer.nmr.mgh.harvard.edu/registration.html)
+</button>
 
 ### Setup
 
@@ -45,13 +50,15 @@ The following tutorial is for Windows 10 computers with Linux subsystem installe
 
   In addition, you can add the source command to your ~/.bashrc file, so freesurfer will be loaded automatically everytime you open the Terminal. To do that, type 
 
+
+  
   ```scss
   sudo nano ~/.bashrc
   ```
 
 
 
-  ,press enter, then type your password. You will see the _.bashrc_ source code in the editing mode. Scroll the file down and add following:
+  Press enter, then type your password. You will see the _.bashrc_ source code in the editing mode. Scroll the file down and add following:
   ![.bashrc editing](.././Screenshots/nano_bashrc.png)
 
   Save changes and restart Ubuntu app.
@@ -59,6 +66,7 @@ The following tutorial is for Windows 10 computers with Linux subsystem installe
 
 
 ## Freesurfer analysis
+
 
 
 Detailed tutorials can be found [here](https://surfer.nmr.mgh.harvard.edu/fswiki/Tutorials).
