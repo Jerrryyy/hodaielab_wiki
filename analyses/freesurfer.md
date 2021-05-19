@@ -88,7 +88,11 @@ Here is the summary of the most frequent errors you may have and how to solve it
   ### Question
   _recon-all_ does command does not work - 'bad interpreter' error.
   ### Answer
+<<<<<<< HEAD
   This may happen because FreeSurfer uses different version of shell (tcsh). You need to type
+=======
+  This may happen because FreeSurfer uses differend version of shell (tcsh). You need to type
+>>>>>>> a46255ca77780881a88bd09a000c71968c695959
 
   |  |  |
   |:-------------|:---------------:|
