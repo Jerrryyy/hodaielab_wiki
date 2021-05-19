@@ -23,7 +23,7 @@ FreeSurfer is free software, however the license  should be obtained in order to
 
 ### Setup
 
-[Setup instructions](#setup-freesurfer){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Setup instructions](https://hungs.github.io/hodaie/analyses/setup-freesurfer.html){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 
 ---
