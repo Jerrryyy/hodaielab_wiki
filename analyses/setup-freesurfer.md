@@ -1,10 +1,10 @@
 ---
-title: FSL 101
+title: FreeSurfer setup
 parent: freesurfer
 grand_parent: analyses
 ---
 
-# Freesurfer setup instructions
+# FreeSurfer setup instructions
 
 The following tutorial is for Windows 10 computers with Linux subsystem installed. [Click here](https://hungs.github.io/hodaie/computing/setup.html) to learn how to enable WLS.
 
@@ -33,12 +33,12 @@ The following tutorial is for Windows 10 computers with Linux subsystem installe
 If you see similar output, your set up is almost completed!
 
 
-Before you start processing your data, be sure to copy your _license.txt_ file to the $FREESURFER_HOME directory. 
+Before you start processing your data, be sure to copy your _license.txt_ file to the $FREESURFER_HOME directory.
 
-In addition, you can add the source command to your ~/.bashrc file, so freesurfer will be loaded automatically everytime you open the Terminal. To do that, type 
+In addition, you can add the source command to your ~/.bashrc file, so freesurfer will be loaded automatically everytime you open the Terminal. To do that, type
 
 
-  
+
 ```scss
   sudo nano ~/.bashrc
 ```
@@ -49,4 +49,3 @@ Press enter, then type your password. You will see the _.bashrc_ source code in 
 ![.bashrc editing](.././Screenshots/nano_bashrc.png)
 
 Save changes and restart Ubuntu app.
-
