@@ -1,6 +1,7 @@
 ---
 title: FreeSurfer 101
 parent: Analyses
+has_children: true
 ---
 
 # FreeSurfer
@@ -40,7 +41,7 @@ Main reconstruction command - _recon-all_ takes T1 MR data (in nifti format) and
 An example of base terminal command:
 
 ```scss
- recon-all -all -subject subjectname -i /path/to/input_volume 
+ recon-all -all -subject subjectname -i /path/to/input_volume
  ```
 where _-all_ flag, performing all steps of reconstruction; _-subject_ name of subject directory created in $SUBJECTS_DIR folder; _-i_ path to input MRI volume.
 
@@ -49,9 +50,9 @@ The entire reconstruction process typically takes 8-24 hours per one subject.
 
 ---
 
-### Thalamic nuclei segmentation 
+### Thalamic nuclei segmentation
 
-Freesurfer 7.0 provides a tool which can perform a segmentation of thalamus into 25 thalamic nuclei using probabilistic atlas. 
+Freesurfer 7.0 provides a tool which can perform a segmentation of thalamus into 25 thalamic nuclei using probabilistic atlas.
 Thalamic nuclei segmentation command required that the T1 MRI data has been analyzed with the main FreeSurfer stream, make sure to run _recon-all_ as a first step.
 
 To run segmentation, type:
@@ -84,7 +85,7 @@ Above command will generate thalamic nuclei volume metrics from the left thalamu
 ## _NB!_
 Hippocampal subfields and thalamic segmentation require the matlab runtime package (MCR). The MCR allows users to run distributed matlab-compiled programs without paying for a matlab license
 
-To install MCR for Freesurfer 7, type 
+To install MCR for Freesurfer 7, type
 ```scss
     fs_install_mcr R2014b
 ```
