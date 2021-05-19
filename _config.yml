@@ -7,3 +7,4 @@ exclude: ['MEG.md']
 aux_links:
   "Lab Website":
     - "//hodaielab.com"
+aux_links_new_tab: true
