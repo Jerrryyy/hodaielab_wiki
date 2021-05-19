@@ -1,7 +1,7 @@
 ---
 title: FreeSurfer setup
-parent: freesurfer
-grand_parent: analyses
+parent: FreeSurfer 101
+grand_parent: Analyses
 ---
 
 # FreeSurfer setup instructions
