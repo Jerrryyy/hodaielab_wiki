@@ -13,3 +13,5 @@ To better understand the principles of DwMRI, here are some useful resources:
 - [Questions and Answers in MRI - DwMRI](https://www.mriquestions.com/diffusion-basic.html)
 - [Dr. Matthew R Walker's thesis](https://hdl.handle.net/1807/97714)
 - [Dr. David Qixiang Chen's thesis](https://hdl.handle.net/1807/91803)
+- [Dr. Sarasa Tohyama's thesis](https://hdl.handle.net/1807/105003)
+- [Dr. Danielle DeSouza's thesis](https://hdl.handle.net/1807/69282)

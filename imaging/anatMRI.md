@@ -10,3 +10,5 @@ To better understand the principles of MRI, here are some useful resources:
 - [Physics of MRI: a primer](https://pubmed.ncbi.nlm.nih.gov/22499279/)
 - [Questions and Answers in MRI](https://www.mriquestions.com/index.html)
 - [Dr. Matthew R Walker's thesis](https://hdl.handle.net/1807/97714)
+- [Alborz Noorani's thesis](https://hdl.handle.net/1807/103736)
+- [Dr. Danielle DeSouza's thesis](https://hdl.handle.net/1807/69282)
