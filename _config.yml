@@ -1,8 +1,8 @@
 remote_theme: pmarsceill/just-the-docs
 title: Hodaie Lab Training Manual
 description: Hodaie Lab Training Manual
-baseurl: "/hodaie"
-url: "https://hungs.github.io"
+baseurl: "/lab_wiki"
+url: "https://hodaielab.github.io"
 aux_links:
   "Lab Website":
     - "//hodaielab.com"
