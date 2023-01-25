@@ -1,7 +1,7 @@
 remote_theme: pmarsceill/just-the-docs
-title: Hodaie Lab Training Manual
-description: Hodaie Lab Training Manual
-baseurl: "/lab_wiki"
+title: Hodaie Lab Wiki
+description: Collection of information on data processing and resources.
+baseurl: "/hodaielab_wiki"
 url: "https://hodaielab.github.io"
 aux_links:
   "Lab Website":
