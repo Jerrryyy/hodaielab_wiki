@@ -31,7 +31,7 @@ gem install bundler
 
 cd <path_to_lab_wiki_root>
 bundle init
-bundle add jekyll --version "~> 3.9.2
+bundle add jekyll --version "~> 3.9.2"
 bundle add webrick
 echo "" >> Gemfile
 echo "gem 'github-pages', group: :jekyll_plugins" >> Gemfile
