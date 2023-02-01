@@ -14,6 +14,8 @@ curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -
 curl -sSL https://get.rvm.io | bash -s stable
 
+source ~/.bashrc  # to make the installation of 'rvm' available in the current session
+
 # 2. install ruby 3.0.0
 rvm install 3.0.0
 rvm --default use 3.0.0
@@ -29,7 +31,7 @@ gem install bundler
 
 cd <path_to_lab_wiki_root>
 bundle init
-bundle add jekyll --version "~> 3.9.2
+bundle add jekyll --version "~> 3.9.2"
 bundle add webrick
 echo "" >> Gemfile
 echo "gem 'github-pages', group: :jekyll_plugins" >> Gemfile
