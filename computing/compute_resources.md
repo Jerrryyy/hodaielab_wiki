@@ -36,6 +36,9 @@ XXX.XXX.XXX.XXX     tn6.uhn
 
 # Jerry's computer
 XXX.XXX.XXX.XXX     tn7.uhn
+
+# Tim's lambda computer
+XXX.XXX.XXX.XXX     tn8.uhn
 ```
 
 # Scinet compute clusters
