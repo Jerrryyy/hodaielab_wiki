@@ -152,12 +152,18 @@ SUBJECT_LIST="/.../subject_list.txt"  # one subject per line
 # list of sessions to be used for generating the study-bidsmap; should be representative, too.
 SESSION_LIST="/.../session_list.txt"  # one session name per line
 
-# create / customize the mapping from dicom data to valid bids names
+# create the mapping from dicom data to valid bids names based on the available data
 bash ${UTILS_REPO}/datalad/conversion/05_create_bidsmap.sh \
     ${BIDS_REPO} \
     ${TEMPLATE_BIDSMAP} \
     ${SUBJECT_LIST} \
     ${SESSION_LIST}
+```
+
+```
+# customaize the infered study bidsmap for the data at hand
+bash ${UTILS_REPO}/datalad/conversion/06_customize_bidsmap.sh \
+    ${BIDS_REPO}
 ```
 
 ```
@@ -168,7 +174,7 @@ SUBJECT_LIST="/.../subject_list.txt"  # one subject per line
 SESSION_LIST="/.../session_list.txt"  # one session name per line
 
 # convert chosen subjects / sessions from dicom to bids format
-bash ${UTILS_REPO}/datalad/conversion/06_convert_to_bids.sh \
+bash ${UTILS_REPO}/datalad/conversion/07_convert_to_bids.sh \
     ${SUBJECT_LIST} \
     ${SESSION_LIST}
 ```
