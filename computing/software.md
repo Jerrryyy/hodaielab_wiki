@@ -30,6 +30,10 @@ well with the `lmod` system (i.e., the `module` command).
   define the bindpaths in the file `.bashrc` as `export SINGULARITY_BINDPATH=/localdata` so that future commands using data only in `/localdata` do not need
   another specification of the environment variable.
 
+3. In case specific singularity flags need to be passed when launching a command from `neurocommands`, the environment variable `neurodesk_singularity_opts` can
+  be used. For example, in order to launch a graphical tool like `mrview`, first define `export neurodesk_singularity_opts="--nv"` to activate the singularity
+  GPU support.
+
 
 #### Example workflow
 
