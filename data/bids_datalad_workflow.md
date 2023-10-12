@@ -17,8 +17,8 @@ part of the complexity in setting up the environments.
 The following variables are used to ease readability of the code examples.
 
 ```
-# path to local clone of 'git@github.com:djoerch/uhn_utils'
-UTILS_REPO="/.../uhn_utils"
+# path to local clone of 'git@github.com:djoerch/dataset_utils'
+DS_UTILS_REPO="/.../dataset_utils"
 
 # path to dicom dataset
 DICOM_REPO="/.../test_dicom"
@@ -38,15 +38,23 @@ SES_PREFIX="ses-"
 
 The dicom folder containing subject folders needs to follow a specific format.
 It can either be created manually, or using a script, e.g. `build_dicom_dataset.sh`
-as used in the NVC project (see code snippet below).
+(see code snippet below). The script `build_dicom_dataset.sh` offers the functionality
+to copy dicom folders, each containing a single session, to dataset folder
+naming subject folders by MRN and session folders by scan date. The input to
+the script is either **a folder with all session folders** or **a file with
+all paths to session folders**. The latter is useful if folders are spread over
+different locations.
 
 ```
-# path to local clone of 'git@github.com:djoerch/nvc'
-NVC_REPO="/.../nvc"
-bash ${NVC_REPO}/tools/subject_screening/build_dicom_dataset.sh \
-    selected_subjects_bilateral_nvc.csv \
+# make sources.csv manually by adding one session folder path per line
+nano sources.csv
+
+bash ${DS_UTILS_REPO}/bids_conversion/build_dicom_dataset.sh \
+    sources.csv \
     ${DICOM_REPO} \
-    ses-pre
+    mapping_origin.csv \
+    non_dicom_files.csv \
+    skipped_session_folders.csv
 ```
 
 The expected folder structure is as follows:
@@ -78,7 +86,8 @@ adding new subjects. No data will be overwritten.
 
 ```
 # subject name mapping (will be created); two columns (ordered): 'original', 'bids'
-SUBJECT_MAPPING="/.../subject_mapping.csv"  # separator MUST be ';' (not ',')
+SUBJECT_MAPPING_OLD="/.../subject_mapping_in.csv"  # separator MUST be ';' (not ',')
+SUBJECT_MAPPING_OUT="/.../subject_mapping_out.csv"  # separator MUST be ';' (not ',')
 
 # list of folders in the dicom dataset which are NOT subject folders
 EXCLUDED_FOLDERS_LIST="/.../excluded_folders.txt"  # one folder name per line
@@ -87,12 +96,13 @@ EXCLUDED_FOLDERS_LIST="/.../excluded_folders.txt"  # one folder name per line
 DIGITS=3
 
 # launch renaming of subject folders with BIDS names
-bash ${UTILS_REPO}/datalad/conversion/00_map_subject_ids.sh \
+bash ${DS_UTILS_REPO}/bids_conversion/00_map_subject_ids.sh \
     ${DICOM_REPO} \
-    ${SUBJECT_MAPPING} \
-    ${SUBJ_PREFIX} \
+    ${SUBJECT_MAPPING_OLD} \
+    ${SUBJECT_MAPPING_OUT} \
     ${EXCLUDED_FOLDERS_LIST} \
-    ${DIGITS}
+    ${DIGITS} \
+    ${SUBJ_PREFIX}
 ```
 
 All scripts may be rerun multiple times (e.g. to add new subjects).
@@ -104,14 +114,14 @@ folders. So, go ahead :)
 SUBJECT_LIST="/.../subject_list.txt"  # one folder name per line
 
 # launch optional creation of datalad dataset and subject subdatasets if needed
-bash ${UTILS_REPO}/datalad/conversion/01_create_datasets.sh \
+bash ${DS_UTILS_REPO}/bids_conversion/01_create_datasets.sh \
     ${DICOM_REPO} \
     ${SUBJECT_LIST}
 ```
 
 ```
 # sort dicom data by creating one folder per image sequence per subject / session
-bash ${UTILS_REPO}/datalad/conversion/02_dicomsort.sh \
+bash ${DS_UTILS_REPO}/bids_conversion/02_dicomsort.sh \
     ${DICOM_REPO} \
     ${SUBJECT_LIST} \
     ${SES_PREFIX}
@@ -119,7 +129,7 @@ bash ${UTILS_REPO}/datalad/conversion/02_dicomsort.sh \
 
 ```
 # remove white spaces from all sequence folder names in the dicom dataset
-bash ${UTILS_REPO}/datalad/conversion/03_clean_dicom_folder_names.sh \
+bash ${DS_UTILS_REPO}/bids_conversion/03_clean_dicom_folder_names.sh \
     ${DICOM_REPO} \
     ${SUBJ_PREFIX} \
     ${SES_PREFIX}
@@ -131,7 +141,7 @@ bash ${UTILS_REPO}/datalad/conversion/03_clean_dicom_folder_names.sh \
 The BIDS dataset is created from the cleaned dicom dataset.
 
 ```
-bash ${UTILS_REPO}/datalad/conversion/04_create_bids_dataset.sh \
+bash ${DS_UTILS_REPO}/bids_conversion/04_create_bids_dataset.sh \
     ${BIDS_REPO} \
     ${DICOM_REPO}
 ```
@@ -153,7 +163,7 @@ SUBJECT_LIST="/.../subject_list.txt"  # one subject per line
 SESSION_LIST="/.../session_list.txt"  # one session name per line
 
 # create the mapping from dicom data to valid bids names based on the available data
-bash ${UTILS_REPO}/datalad/conversion/05_create_bidsmap.sh \
+bash ${DS_UTILS_REPO}/bids_conversion/05_create_bidsmap.sh \
     ${BIDS_REPO} \
     ${TEMPLATE_BIDSMAP} \
     ${SUBJECT_LIST} \
@@ -162,7 +172,7 @@ bash ${UTILS_REPO}/datalad/conversion/05_create_bidsmap.sh \
 
 ```
 # customaize the infered study bidsmap for the data at hand
-bash ${UTILS_REPO}/datalad/conversion/06_customize_bidsmap.sh \
+bash ${DS_UTILS_REPO}/bids_conversion/06_customize_bidsmap.sh \
     ${BIDS_REPO}
 ```
 
@@ -174,7 +184,7 @@ SUBJECT_LIST="/.../subject_list.txt"  # one subject per line
 SESSION_LIST="/.../session_list.txt"  # one session name per line
 
 # convert chosen subjects / sessions from dicom to bids format
-bash ${UTILS_REPO}/datalad/conversion/07_convert_to_bids.sh \
+bash ${DS_UTILS_REPO}/bids_conversion/07_convert_to_bids.sh \
     ${SUBJECT_LIST} \
     ${SESSION_LIST}
 ```
